@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BE04930-F9F8-40D2-B3E9-BE38D5DF4A63}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EZ_studycafe</RootNamespace>
+    <AssemblyName>EZ_studycafe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\oraclexe\app\oracle\product\11.2.0\server\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPass.Designer.cs">
+      <DependentUpon>adminPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chargePoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chargePoint.Designer.cs">
+      <DependentUpon>chargePoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="couponAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="couponAdmin.Designer.cs">
+      <DependentUpon>couponAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="couponEditAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="couponEditAd.Designer.cs">
+      <DependentUpon>couponEditAd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="couponListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="couponListView.Designer.cs">
+      <DependentUpon>couponListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="couponModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="couponModal.Designer.cs">
+      <DependentUpon>couponModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="couponSearchAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="couponSearchAd.Designer.cs">
+      <DependentUpon>couponSearchAd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="join.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="join.Designer.cs">
+      <DependentUpon>join.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pointUseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pointUseList.Designer.cs">
+      <DependentUpon>pointUseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reservationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reservationDetail.Designer.cs">
+      <DependentUpon>reservationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seat.Designer.cs">
+      <DependentUpon>seat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seatAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seatAdmin.Designer.cs">
+      <DependentUpon>seatAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seatModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seatModify.Designer.cs">
+      <DependentUpon>seatModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seatReservationAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seatReservationAd.Designer.cs">
+      <DependentUpon>seatReservationAd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stamp.Designer.cs">
+      <DependentUpon>stamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stampAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stampAdmin.Designer.cs">
+      <DependentUpon>stampAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stampUseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stampUseList.Designer.cs">
+      <DependentUpon>stampUseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="timeSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="timeSelect.Designer.cs">
+      <DependentUpon>timeSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userAdmin.Designer.cs">
+      <DependentUpon>userAdmin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPass.resx">
+      <DependentUpon>adminPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chargePoint.resx">
+      <DependentUpon>chargePoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="couponAdmin.resx">
+      <DependentUpon>couponAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="couponEditAd.resx">
+      <DependentUpon>couponEditAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="couponListView.resx">
+      <DependentUpon>couponListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="couponModal.resx">
+      <DependentUpon>couponModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="couponSearchAd.resx">
+      <DependentUpon>couponSearchAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="join.resx">
+      <DependentUpon>join.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pointUseList.resx">
+      <DependentUpon>pointUseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="reservationDetail.resx">
+      <DependentUpon>reservationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seat.resx">
+      <DependentUpon>seat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seatAdmin.resx">
+      <DependentUpon>seatAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seatModify.resx">
+      <DependentUpon>seatModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seatReservationAd.resx">
+      <DependentUpon>seatReservationAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stamp.resx">
+      <DependentUpon>stamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stampAdmin.resx">
+      <DependentUpon>stampAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stampUseList.resx">
+      <DependentUpon>stampUseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="timeSelect.resx">
+      <DependentUpon>timeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userAdmin.resx">
+      <DependentUpon>userAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

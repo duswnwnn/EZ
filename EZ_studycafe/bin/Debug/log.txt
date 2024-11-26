@@ -1,0 +1,12 @@
+[2024-11-13 오전 12:15:12] 회원가입 오류: ORA-12154: TNS:could not resolve the connect identifier specified
+[2024-11-13 오전 12:15:20] 회원가입 오류: ORA-12154: TNS:could not resolve the connect identifier specified
+[2024-11-13 오전 12:15:24] 회원가입 오류: ORA-12154: TNS:could not resolve the connect identifier specified
+[2024-11-13 오전 12:22:29] 회원가입 오류: ORA-00942: table or view does not exist
+[2024-11-13 오전 12:22:38] 회원가입 오류: ORA-00942: table or view does not exist
+[2024-11-13 오전 12:22:45] 회원가입 오류: ORA-00942: table or view does not exist
+[2024-11-13 오전 12:28:57] 회원가입 오류: ORA-12154: TNS:could not resolve the connect identifier specified
+[2024-11-13 오전 12:34:06] 회원가입 오류: ORA-12154: TNS:could not resolve the connect identifier specified
+[2024-11-13 오전 12:37:23] 회원가입 오류: ORA-12154: TNS:could not resolve the connect identifier specified
+[2024-11-13 오전 12:43:07] 회원가입 오류: ORA-12154: TNS:could not resolve the connect identifier specified
+[2024-11-13 오전 12:46:28] 회원가입 오류: ORA-12154: TNS:could not resolve the connect identifier specified
+[2024-11-13 오전 12:46:36] 회원가입 오류: ORA-12154: TNS:could not resolve the connect identifier specified

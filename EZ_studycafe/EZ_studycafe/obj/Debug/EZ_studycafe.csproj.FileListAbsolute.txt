@@ -1,0 +1,15 @@
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\bin\Debug\EZ_studycafe.exe
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\bin\Debug\EZ_studycafe.exe.config
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.coupon.resources
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.join.resources
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.main.resources
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.payment.resources
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.Properties.Resources.resources
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.seat.resources
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.ticket.resources
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.csproj.GenerateResource.cache
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.csproj.CoreCompileInputs.cache
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.exe
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.pdb
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\bin\Debug\EZ_studycafe.pdb
+C:\Users\sooye\source\repos\EZ_studycafe\EZ_studycafe\obj\Debug\EZ_studycafe.csproj.AssemblyReference.cache
