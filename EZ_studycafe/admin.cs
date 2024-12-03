@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.DataAccess.Client;
 
 namespace EZ_studycafe
 {
@@ -51,5 +52,6 @@ namespace EZ_studycafe
             login showlogin = new login();
             showlogin.ShowDialog();
         }
+
     }
 }

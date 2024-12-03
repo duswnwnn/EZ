@@ -33,12 +33,12 @@ namespace EZ_studycafe
             this.label1 = new System.Windows.Forms.Label();
             this.seatAdminDataGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.seatNumber = new System.Windows.Forms.TextBox();
+            this.seatCategory = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.seatModificationBtn = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.sseatSearchBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.seatAdminDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,12 +51,13 @@ namespace EZ_studycafe
             this.backSeat.Size = new System.Drawing.Size(33, 30);
             this.backSeat.TabIndex = 82;
             this.backSeat.Text = "<";
+            this.backSeat.Click += new System.EventHandler(this.backSeat_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(301, 16);
+            this.label1.Location = new System.Drawing.Point(202, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 30);
             this.label1.TabIndex = 81;
@@ -69,8 +70,9 @@ namespace EZ_studycafe
             this.seatAdminDataGridView.Name = "seatAdminDataGridView";
             this.seatAdminDataGridView.RowHeadersWidth = 51;
             this.seatAdminDataGridView.RowTemplate.Height = 27;
-            this.seatAdminDataGridView.Size = new System.Drawing.Size(671, 212);
+            this.seatAdminDataGridView.Size = new System.Drawing.Size(536, 212);
             this.seatAdminDataGridView.TabIndex = 83;
+            this.seatAdminDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seatAdminDataGridView_CellClick);
             // 
             // label2
             // 
@@ -81,19 +83,19 @@ namespace EZ_studycafe
             this.label2.TabIndex = 84;
             this.label2.Text = "좌석번호";
             // 
-            // textBox1
+            // seatNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 85;
+            this.seatNumber.Location = new System.Drawing.Point(123, 75);
+            this.seatNumber.Name = "seatNumber";
+            this.seatNumber.Size = new System.Drawing.Size(100, 25);
+            this.seatNumber.TabIndex = 85;
             // 
-            // textBox2
+            // seatCategory
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
-            this.textBox2.TabIndex = 87;
+            this.seatCategory.Location = new System.Drawing.Point(123, 126);
+            this.seatCategory.Name = "seatCategory";
+            this.seatCategory.Size = new System.Drawing.Size(100, 25);
+            this.seatCategory.TabIndex = 87;
             // 
             // label3
             // 
@@ -104,43 +106,44 @@ namespace EZ_studycafe
             this.label3.TabIndex = 86;
             this.label3.Text = "좌석분류";
             // 
-            // button3
+            // seatModificationBtn
             // 
-            this.button3.Location = new System.Drawing.Point(637, 402);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 33);
-            this.button3.TabIndex = 90;
-            this.button3.Text = "수정";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.seatModificationBtn.Location = new System.Drawing.Point(502, 409);
+            this.seatModificationBtn.Name = "seatModificationBtn";
+            this.seatModificationBtn.Size = new System.Drawing.Size(75, 33);
+            this.seatModificationBtn.TabIndex = 90;
+            this.seatModificationBtn.Text = "수정";
+            this.seatModificationBtn.UseVisualStyleBackColor = true;
+            this.seatModificationBtn.Click += new System.EventHandler(this.seatModificationBtn_Click);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(482, 151);
+            this.textBox3.Location = new System.Drawing.Point(347, 151);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(138, 25);
             this.textBox3.TabIndex = 92;
             // 
-            // button2
+            // sseatSearchBtn
             // 
-            this.button2.Location = new System.Drawing.Point(637, 145);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 33);
-            this.button2.TabIndex = 92;
-            this.button2.Text = "찾기";
-            this.button2.UseVisualStyleBackColor = true;
+            this.sseatSearchBtn.Location = new System.Drawing.Point(502, 145);
+            this.sseatSearchBtn.Name = "sseatSearchBtn";
+            this.sseatSearchBtn.Size = new System.Drawing.Size(75, 33);
+            this.sseatSearchBtn.TabIndex = 92;
+            this.sseatSearchBtn.Text = "찾기";
+            this.sseatSearchBtn.UseVisualStyleBackColor = true;
+            this.sseatSearchBtn.Click += new System.EventHandler(this.sseatSearchBtn_Click);
             // 
             // seatAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 461);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(621, 461);
+            this.Controls.Add(this.sseatSearchBtn);
+            this.Controls.Add(this.seatModificationBtn);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.seatCategory);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.seatNumber);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.seatAdminDataGridView);
             this.Controls.Add(this.backSeat);
@@ -159,11 +162,11 @@ namespace EZ_studycafe
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView seatAdminDataGridView;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox seatNumber;
+        private System.Windows.Forms.TextBox seatCategory;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button seatModificationBtn;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button sseatSearchBtn;
     }
 }

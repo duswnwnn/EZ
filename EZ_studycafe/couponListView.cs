@@ -66,9 +66,18 @@ namespace EZ_studycafe
                 {
                     connection.Open();
                     string query = @"
-                SELECT C.Coupon_ID, C.Coupon_Code_ID, C.Received_Date, C.Is_Used
-                FROM COUPON C
-                WHERE C.User_ID = :UserID"; // 사용자 이름을 제외한 쿠폰 정보 조회
+                SELECT 
+                    C.Coupon_ID, 
+                    C.Coupon_Code_ID, 
+                    CC.Coupon_Name,  -- 쿠폰 이름 추가
+                    C.Received_Date, 
+                    C.Is_Used
+                FROM 
+                    COUPON C
+                JOIN 
+                    COUPON_CODE CC ON C.Coupon_Code_ID = CC.Coupon_Code_ID
+                WHERE 
+                    C.User_ID = :UserID"; // 사용자 이름을 제외한 쿠폰 정보 조회
 
                     using (OracleCommand command = new OracleCommand(query, connection))
                     {
@@ -82,6 +91,7 @@ namespace EZ_studycafe
                         coupinList.Columns.Clear(); // 컬럼 초기화
                         coupinList.Columns.Add("쿠폰 ID", 100);
                         coupinList.Columns.Add("쿠폰 코드", 100);
+                        coupinList.Columns.Add("쿠폰 이름", 100);  // 쿠폰 이름 컬럼 추가
                         coupinList.Columns.Add("발급일", 120);
                         coupinList.Columns.Add("사용 여부", 80);
 
@@ -90,10 +100,11 @@ namespace EZ_studycafe
                         {
                             string couponID = reader["Coupon_ID"].ToString();
                             string couponCode = reader["Coupon_Code_ID"].ToString();
+                            string couponName = reader["Coupon_Name"].ToString();  // 쿠폰 이름
                             string receivedDate = reader["Received_Date"].ToString();
                             string isUsed = reader["Is_Used"].ToString() == "Y" ? "사용됨" : "미사용";
 
-                            ListViewItem item = new ListViewItem(new[] { couponID, couponCode, receivedDate, isUsed });
+                            ListViewItem item = new ListViewItem(new[] { couponID, couponCode, couponName, receivedDate, isUsed });
                             coupinList.Items.Add(item);
                         }
                     }

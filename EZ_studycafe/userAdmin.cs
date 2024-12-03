@@ -119,5 +119,23 @@ namespace EZ_studycafe
             admin showadmin = new admin();
             showadmin.ShowDialog();
         }
+        // couponManageBtn 클릭 이벤트 핸들러
+        private void couponManageBtn_Click(object sender, EventArgs e)
+        {
+            if (userListView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("사용자를 선택해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 선택된 행의 데이터 가져오기
+            var selectedItem = userListView.SelectedItems[0];
+            string userId = selectedItem.SubItems[0].Text; // USER_ID
+
+            // couponUserAdmin 폼에 데이터 전달
+            couponUserAdmin couponForm = new couponUserAdmin(userId);
+            couponForm.ShowDialog();
+        }
+
     }
 }

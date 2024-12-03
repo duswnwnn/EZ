@@ -33,22 +33,21 @@ namespace EZ_studycafe
             this.backSeat = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.couponGridView = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.추가ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.수정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.선택한행삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ACouponName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ACouponNum = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ACouponStamp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.couponOk = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.추가ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.수정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.선택한행삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.검색ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crystalBtn = new System.Windows.Forms.Button();
+            this.eliminationBtn = new System.Windows.Forms.Button();
+            this.additionalBtn = new System.Windows.Forms.Button();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.couponGridView)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,12 +61,13 @@ namespace EZ_studycafe
             this.backSeat.Size = new System.Drawing.Size(33, 30);
             this.backSeat.TabIndex = 84;
             this.backSeat.Text = "<";
+            this.backSeat.Click += new System.EventHandler(this.backSeat_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(301, 18);
+            this.label1.Location = new System.Drawing.Point(259, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 30);
             this.label1.TabIndex = 83;
@@ -76,6 +76,7 @@ namespace EZ_studycafe
             // couponGridView
             // 
             this.couponGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.couponGridView.ContextMenuStrip = this.contextMenuStrip1;
             this.couponGridView.Location = new System.Drawing.Point(42, 205);
             this.couponGridView.Name = "couponGridView";
             this.couponGridView.RowHeadersWidth = 51;
@@ -83,6 +84,37 @@ namespace EZ_studycafe
             this.couponGridView.Size = new System.Drawing.Size(666, 212);
             this.couponGridView.TabIndex = 85;
             this.couponGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.couponGridView_CellClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.추가ToolStripMenuItem,
+            this.수정ToolStripMenuItem,
+            this.선택한행삭제ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 76);
+            // 
+            // 추가ToolStripMenuItem
+            // 
+            this.추가ToolStripMenuItem.Name = "추가ToolStripMenuItem";
+            this.추가ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.추가ToolStripMenuItem.Text = "추가";
+            this.추가ToolStripMenuItem.Click += new System.EventHandler(this.추가ToolStripMenuItem_Click);
+            // 
+            // 수정ToolStripMenuItem
+            // 
+            this.수정ToolStripMenuItem.Name = "수정ToolStripMenuItem";
+            this.수정ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.수정ToolStripMenuItem.Text = "수정";
+            this.수정ToolStripMenuItem.Click += new System.EventHandler(this.수정ToolStripMenuItem_Click);
+            // 
+            // 선택한행삭제ToolStripMenuItem
+            // 
+            this.선택한행삭제ToolStripMenuItem.Name = "선택한행삭제ToolStripMenuItem";
+            this.선택한행삭제ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.선택한행삭제ToolStripMenuItem.Text = "삭제";
+            this.선택한행삭제ToolStripMenuItem.Click += new System.EventHandler(this.선택한행삭제ToolStripMenuItem_Click);
             // 
             // ACouponName
             // 
@@ -132,98 +164,65 @@ namespace EZ_studycafe
             this.label4.TabIndex = 96;
             this.label4.Text = "필요 스탬프";
             // 
-            // couponOk
+            // crystalBtn
             // 
-            this.couponOk.Location = new System.Drawing.Point(363, 425);
-            this.couponOk.Name = "couponOk";
-            this.couponOk.Size = new System.Drawing.Size(75, 33);
-            this.couponOk.TabIndex = 100;
-            this.couponOk.Text = "조회";
-            this.couponOk.UseVisualStyleBackColor = true;
+            this.crystalBtn.Location = new System.Drawing.Point(543, 163);
+            this.crystalBtn.Name = "crystalBtn";
+            this.crystalBtn.Size = new System.Drawing.Size(75, 33);
+            this.crystalBtn.TabIndex = 95;
+            this.crystalBtn.Text = "수정";
+            this.crystalBtn.UseVisualStyleBackColor = true;
+            this.crystalBtn.Click += new System.EventHandler(this.crystalBtn_Click);
             // 
-            // contextMenuStrip1
+            // eliminationBtn
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.추가ToolStripMenuItem,
-            this.수정ToolStripMenuItem,
-            this.선택한행삭제ToolStripMenuItem,
-            this.검색ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 100);
+            this.eliminationBtn.Location = new System.Drawing.Point(633, 163);
+            this.eliminationBtn.Name = "eliminationBtn";
+            this.eliminationBtn.Size = new System.Drawing.Size(75, 33);
+            this.eliminationBtn.TabIndex = 98;
+            this.eliminationBtn.Text = "삭제";
+            this.eliminationBtn.UseVisualStyleBackColor = true;
+            this.eliminationBtn.Click += new System.EventHandler(this.eliminationBtn_Click);
             // 
-            // 추가ToolStripMenuItem
+            // additionalBtn
             // 
-            this.추가ToolStripMenuItem.Name = "추가ToolStripMenuItem";
-            this.추가ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
-            this.추가ToolStripMenuItem.Text = "추가";
+            this.additionalBtn.Location = new System.Drawing.Point(447, 163);
+            this.additionalBtn.Name = "additionalBtn";
+            this.additionalBtn.Size = new System.Drawing.Size(75, 33);
+            this.additionalBtn.TabIndex = 99;
+            this.additionalBtn.Text = "추가";
+            this.additionalBtn.UseVisualStyleBackColor = true;
+            this.additionalBtn.Click += new System.EventHandler(this.additionalBtn_Click);
             // 
-            // 수정ToolStripMenuItem
+            // searchBtn
             // 
-            this.수정ToolStripMenuItem.Name = "수정ToolStripMenuItem";
-            this.수정ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
-            this.수정ToolStripMenuItem.Text = "수정";
+            this.searchBtn.Location = new System.Drawing.Point(633, 68);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(75, 33);
+            this.searchBtn.TabIndex = 101;
+            this.searchBtn.Text = "검색";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
-            // 선택한행삭제ToolStripMenuItem
+            // searchTextBox
             // 
-            this.선택한행삭제ToolStripMenuItem.Name = "선택한행삭제ToolStripMenuItem";
-            this.선택한행삭제ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
-            this.선택한행삭제ToolStripMenuItem.Text = "삭제";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(543, 160);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 33);
-            this.button3.TabIndex = 95;
-            this.button3.Text = "수정";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(633, 160);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 98;
-            this.button1.Text = "삭제";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(447, 160);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 33);
-            this.button2.TabIndex = 99;
-            this.button2.Text = "추가";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(351, 158);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 33);
-            this.button4.TabIndex = 101;
-            this.button4.Text = "검색";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // 검색ToolStripMenuItem
-            // 
-            this.검색ToolStripMenuItem.Name = "검색ToolStripMenuItem";
-            this.검색ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
-            this.검색ToolStripMenuItem.Text = "검색";
+            this.searchTextBox.Location = new System.Drawing.Point(447, 74);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(170, 25);
+            this.searchTextBox.TabIndex = 102;
             // 
             // couponAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 470);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.couponOk);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(759, 448);
+            this.Controls.Add(this.searchTextBox);
+            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.additionalBtn);
+            this.Controls.Add(this.eliminationBtn);
             this.Controls.Add(this.ACouponStamp);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.crystalBtn);
             this.Controls.Add(this.ACouponName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ACouponNum);
@@ -251,15 +250,14 @@ namespace EZ_studycafe
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox ACouponStamp;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button couponOk;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 추가ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 수정ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 선택한행삭제ToolStripMenuItem;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ToolStripMenuItem 검색ToolStripMenuItem;
+        private System.Windows.Forms.Button crystalBtn;
+        private System.Windows.Forms.Button eliminationBtn;
+        private System.Windows.Forms.Button additionalBtn;
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.TextBox searchTextBox;
     }
 }

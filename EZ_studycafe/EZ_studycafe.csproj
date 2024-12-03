@@ -68,6 +68,12 @@
     <Compile Include="chargePoint.Designer.cs">
       <DependentUpon>chargePoint.cs</DependentUpon>
     </Compile>
+    <Compile Include="couponAddAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="couponAddAd.Designer.cs">
+      <DependentUpon>couponAddAd.cs</DependentUpon>
+    </Compile>
     <Compile Include="couponAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,18 @@
     </Compile>
     <Compile Include="couponSearchAd.Designer.cs">
       <DependentUpon>couponSearchAd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="couponUserAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="couponUserAdmin.Designer.cs">
+      <DependentUpon>couponUserAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="couponUserAdminList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="couponUserAdminList.Designer.cs">
+      <DependentUpon>couponUserAdminList.cs</DependentUpon>
     </Compile>
     <Compile Include="join.cs">
       <SubType>Form</SubType>
@@ -187,6 +205,9 @@
     <EmbeddedResource Include="chargePoint.resx">
       <DependentUpon>chargePoint.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="couponAddAd.resx">
+      <DependentUpon>couponAddAd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="couponAdmin.resx">
       <DependentUpon>couponAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +222,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="couponSearchAd.resx">
       <DependentUpon>couponSearchAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="couponUserAdmin.resx">
+      <DependentUpon>couponUserAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="couponUserAdminList.resx">
+      <DependentUpon>couponUserAdminList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="join.resx">
       <DependentUpon>join.cs</DependentUpon>

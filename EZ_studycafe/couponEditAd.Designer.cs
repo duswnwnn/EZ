@@ -37,11 +37,13 @@ namespace EZ_studycafe
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.AdisTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ACouponStamp
             // 
-            this.ACouponStamp.Location = new System.Drawing.Point(208, 168);
+            this.ACouponStamp.Location = new System.Drawing.Point(208, 203);
             this.ACouponStamp.Name = "ACouponStamp";
             this.ACouponStamp.Size = new System.Drawing.Size(170, 25);
             this.ACouponStamp.TabIndex = 103;
@@ -50,7 +52,7 @@ namespace EZ_studycafe
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(73, 169);
+            this.label4.Location = new System.Drawing.Point(73, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 17);
             this.label4.TabIndex = 102;
@@ -102,18 +104,38 @@ namespace EZ_studycafe
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(366, 219);
+            this.button1.Location = new System.Drawing.Point(366, 254);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 105;
             this.button1.Text = "적용";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // AdisTextBox
+            // 
+            this.AdisTextBox.Location = new System.Drawing.Point(208, 163);
+            this.AdisTextBox.Name = "AdisTextBox";
+            this.AdisTextBox.Size = new System.Drawing.Size(170, 25);
+            this.AdisTextBox.TabIndex = 117;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(74, 163);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 17);
+            this.label5.TabIndex = 116;
+            this.label5.Text = "할인률";
             // 
             // couponEditAd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 254);
+            this.ClientSize = new System.Drawing.Size(453, 289);
+            this.Controls.Add(this.AdisTextBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ACouponStamp);
@@ -131,13 +153,15 @@ namespace EZ_studycafe
 
         #endregion
 
-        private System.Windows.Forms.TextBox ACouponStamp;
+        public System.Windows.Forms.TextBox ACouponStamp;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox ACouponName;
+        public System.Windows.Forms.TextBox ACouponName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox ACouponNum;
+        public System.Windows.Forms.TextBox ACouponNum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox AdisTextBox;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -36,6 +36,7 @@ namespace EZ_studycafe
             this.userTextBox = new System.Windows.Forms.TextBox();
             this.userSearchBtn = new System.Windows.Forms.Button();
             this.stampManageBtn = new System.Windows.Forms.Button();
+            this.couponManageBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // backSeat
@@ -105,11 +106,22 @@ namespace EZ_studycafe
             this.stampManageBtn.UseVisualStyleBackColor = true;
             this.stampManageBtn.Click += new System.EventHandler(this.stampManageBtn_Click);
             // 
+            // couponManageBtn
+            // 
+            this.couponManageBtn.Location = new System.Drawing.Point(402, 408);
+            this.couponManageBtn.Name = "couponManageBtn";
+            this.couponManageBtn.Size = new System.Drawing.Size(114, 36);
+            this.couponManageBtn.TabIndex = 93;
+            this.couponManageBtn.Text = "쿠폰 관리";
+            this.couponManageBtn.UseVisualStyleBackColor = true;
+            this.couponManageBtn.Click += new System.EventHandler(this.couponManageBtn_Click);
+            // 
             // userAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 456);
+            this.Controls.Add(this.couponManageBtn);
             this.Controls.Add(this.userSearchBtn);
             this.Controls.Add(this.userTextBox);
             this.Controls.Add(this.stampManageBtn);
@@ -133,5 +145,6 @@ namespace EZ_studycafe
         private System.Windows.Forms.TextBox userTextBox;
         private System.Windows.Forms.Button userSearchBtn;
         private System.Windows.Forms.Button stampManageBtn;
+        private System.Windows.Forms.Button couponManageBtn;
     }
 }
