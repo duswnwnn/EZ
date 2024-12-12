@@ -122,6 +122,14 @@ namespace EZ_studycafe
                 }
             }
         }
+        private void loadStampBtn_Click(object sender, EventArgs e)
+        {
+            // 날짜 선택 초기화
+            dateTimePickerC.Value = DateTime.Today; // 오늘 날짜로 초기화
+
+            // 전체 리스트를 로드
+            LoadStampUsage(); // 날짜 필터 없이 모든 스탬프 사용 내역을 불러옵니다.
+        }
 
         private void 좌석이용ToolStripMenuItem_Click(object sender, EventArgs e)
         {

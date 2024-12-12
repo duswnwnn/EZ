@@ -94,5 +94,10 @@ namespace EZ_studycafe
         {
             this.Close(); // 현재 폼 닫기
         }
+
+        private void stampAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

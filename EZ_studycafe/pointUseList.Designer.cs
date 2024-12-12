@@ -44,6 +44,8 @@ namespace EZ_studycafe
             this.label1 = new System.Windows.Forms.Label();
             this.pointUaeName = new System.Windows.Forms.Label();
             this.dateTimePickerP = new System.Windows.Forms.DateTimePicker();
+            this.loadPointBtn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +89,7 @@ namespace EZ_studycafe
             this.사용내역ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(714, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(714, 28);
             this.menuStrip1.TabIndex = 92;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -169,11 +171,32 @@ namespace EZ_studycafe
             this.dateTimePickerP.TabIndex = 95;
             this.dateTimePickerP.ValueChanged += new System.EventHandler(this.dateTimePickerP_ValueChanged);
             // 
+            // loadPointBtn
+            // 
+            this.loadPointBtn.Location = new System.Drawing.Point(320, 400);
+            this.loadPointBtn.Name = "loadPointBtn";
+            this.loadPointBtn.Size = new System.Drawing.Size(75, 30);
+            this.loadPointBtn.TabIndex = 96;
+            this.loadPointBtn.Text = "전체조회";
+            this.loadPointBtn.UseVisualStyleBackColor = true;
+            this.loadPointBtn.Click += new System.EventHandler(this.loadPointBtn_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(546, 150);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 97;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // pointUseList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 411);
+            this.ClientSize = new System.Drawing.Size(714, 442);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.loadPointBtn);
             this.Controls.Add(this.dateTimePickerP);
             this.Controls.Add(this.pointUaeName);
             this.Controls.Add(this.usingPointList);
@@ -181,6 +204,7 @@ namespace EZ_studycafe
             this.Controls.Add(this.label1);
             this.Name = "pointUseList";
             this.Text = "pointUseList";
+            this.Load += new System.EventHandler(this.pointUseList_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -205,5 +229,7 @@ namespace EZ_studycafe
         private System.Windows.Forms.ColumnHeader USAGE_TYPE;
         private System.Windows.Forms.Label pointUaeName;
         private System.Windows.Forms.DateTimePicker dateTimePickerP;
+        private System.Windows.Forms.Button loadPointBtn;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

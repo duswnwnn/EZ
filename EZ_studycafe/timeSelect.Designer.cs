@@ -42,7 +42,6 @@ namespace EZ_studycafe
             this.myPoint = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.needPoint = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.timeName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -50,7 +49,7 @@ namespace EZ_studycafe
             // 
             this.ticketOKBtn.BackColor = System.Drawing.Color.Silver;
             this.ticketOKBtn.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ticketOKBtn.Location = new System.Drawing.Point(431, 341);
+            this.ticketOKBtn.Location = new System.Drawing.Point(440, 315);
             this.ticketOKBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ticketOKBtn.Name = "ticketOKBtn";
             this.ticketOKBtn.Size = new System.Drawing.Size(81, 38);
@@ -113,7 +112,7 @@ namespace EZ_studycafe
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(124, 195);
+            this.label8.Location = new System.Drawing.Point(124, 198);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 20);
             this.label8.TabIndex = 78;
@@ -123,7 +122,7 @@ namespace EZ_studycafe
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(419, 191);
+            this.button1.Location = new System.Drawing.Point(419, 194);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 30);
@@ -136,7 +135,7 @@ namespace EZ_studycafe
             // 
             this.couponTitle.AutoSize = true;
             this.couponTitle.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.couponTitle.Location = new System.Drawing.Point(205, 195);
+            this.couponTitle.Location = new System.Drawing.Point(205, 198);
             this.couponTitle.Name = "couponTitle";
             this.couponTitle.Size = new System.Drawing.Size(0, 20);
             this.couponTitle.TabIndex = 80;
@@ -145,7 +144,7 @@ namespace EZ_studycafe
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(125, 275);
+            this.label11.Location = new System.Drawing.Point(134, 249);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(157, 19);
             this.label11.TabIndex = 82;
@@ -155,7 +154,7 @@ namespace EZ_studycafe
             // 
             this.myPoint.AutoSize = true;
             this.myPoint.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.myPoint.Location = new System.Drawing.Point(288, 275);
+            this.myPoint.Location = new System.Drawing.Point(297, 249);
             this.myPoint.Name = "myPoint";
             this.myPoint.Size = new System.Drawing.Size(0, 19);
             this.myPoint.TabIndex = 83;
@@ -164,7 +163,7 @@ namespace EZ_studycafe
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(125, 329);
+            this.label14.Location = new System.Drawing.Point(134, 303);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(130, 19);
             this.label14.TabIndex = 84;
@@ -174,19 +173,10 @@ namespace EZ_studycafe
             // 
             this.needPoint.AutoSize = true;
             this.needPoint.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.needPoint.Location = new System.Drawing.Point(274, 329);
+            this.needPoint.Location = new System.Drawing.Point(283, 303);
             this.needPoint.Name = "needPoint";
             this.needPoint.Size = new System.Drawing.Size(0, 19);
             this.needPoint.TabIndex = 85;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 229);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 15);
-            this.label2.TabIndex = 86;
-            this.label2.Text = "쿠폰정보 와랄라";
             // 
             // timeName
             // 
@@ -201,9 +191,8 @@ namespace EZ_studycafe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 413);
+            this.ClientSize = new System.Drawing.Size(611, 382);
             this.Controls.Add(this.timeName);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.needPoint);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.myPoint);
@@ -240,7 +229,6 @@ namespace EZ_studycafe
         private System.Windows.Forms.Label needPoint;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label myPoint;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label timeName;
     }
 }

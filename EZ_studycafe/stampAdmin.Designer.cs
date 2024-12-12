@@ -142,6 +142,7 @@ namespace EZ_studycafe
             this.Controls.Add(this.label1);
             this.Name = "stampAdmin";
             this.Text = "stampAdmin";
+            this.Load += new System.EventHandler(this.stampAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

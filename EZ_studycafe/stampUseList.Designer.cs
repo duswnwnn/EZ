@@ -44,6 +44,7 @@ namespace EZ_studycafe
             this.STAMP_TYPE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stampUseName = new System.Windows.Forms.Label();
             this.dateTimePickerC = new System.Windows.Forms.DateTimePicker();
+            this.loadStampBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,11 +169,22 @@ namespace EZ_studycafe
             this.dateTimePickerC.TabIndex = 92;
             this.dateTimePickerC.ValueChanged += new System.EventHandler(this.dateTimePickerC_ValueChanged);
             // 
+            // loadStampBtn
+            // 
+            this.loadStampBtn.Location = new System.Drawing.Point(304, 394);
+            this.loadStampBtn.Name = "loadStampBtn";
+            this.loadStampBtn.Size = new System.Drawing.Size(86, 30);
+            this.loadStampBtn.TabIndex = 93;
+            this.loadStampBtn.Text = "전체조회";
+            this.loadStampBtn.UseVisualStyleBackColor = true;
+            this.loadStampBtn.Click += new System.EventHandler(this.loadStampBtn_Click);
+            // 
             // stampUseList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 413);
+            this.ClientSize = new System.Drawing.Size(705, 433);
+            this.Controls.Add(this.loadStampBtn);
             this.Controls.Add(this.dateTimePickerC);
             this.Controls.Add(this.stampUseName);
             this.Controls.Add(this.usingStampList);
@@ -205,5 +217,6 @@ namespace EZ_studycafe
         private System.Windows.Forms.ColumnHeader STAMP_TYPE;
         private System.Windows.Forms.Label stampUseName;
         private System.Windows.Forms.DateTimePicker dateTimePickerC;
+        private System.Windows.Forms.Button loadStampBtn;
     }
 }
